@@ -1,0 +1,103 @@
+body {
+    margin: 0px;
+}
+#game{
+    
+    top: 5%;
+    left: 50%;
+    transform:translateX(-50%);
+    width: 300px;
+    height: 550px;
+    border: 3px solid black;
+    overflow: hidden;
+    position: absolute;
+}
+#block{
+    width: 50px;
+    height: 200px;
+    background-image: linear-gradient(to right, rgb(60, 161, 2), rgb(4, 68, 2));
+    border-left: 3px solid rgb(90, 37, 57);
+    border-right: 3px solid rgb(90, 37, 57);
+    border-bottom: 3px solid rgb(90, 37, 57);
+    position: absolute;
+    left: 300px;
+    animation: block 3s infinite linear;
+}
+
+#downblock{
+    width: 50px;
+    height: 200px;
+    background-image: linear-gradient(to right, rgb(60, 161, 2), rgb(4, 68, 2));
+    border: 3px solid rgb(90, 37, 57);
+    position: absolute;
+    top: 350px;
+    left: 300px;
+    animation: block 3s infinite linear;
+}
+@keyframes block{
+    0%{left:300px}
+    100%{left:-100px}
+}
+#hole{
+    width: 50px;
+    height: 150px;
+    background-color:transparent;
+    position: absolute;
+    left: 300px;
+    top: 200px;
+    animation: block 3s infinite linear;
+}
+
+#character{
+    width: 30px;
+    height: 25px;
+    left: 50px;
+    position: absolute;
+    top: 100px;
+}
+
+#flatbartop
+{
+    top:178px;
+    width:60px;
+    height: 20px;
+    background-image: linear-gradient(to right, rgb(60, 161, 2), rgb(4, 68, 2));
+    border: 3px solid rgb(90, 37, 57);
+    animation: flatbar 3s infinite linear;
+    position: absolute;
+
+}
+@keyframes flatbar{
+    0%{left:295px}
+    100%{left:-105px}
+}
+
+#flatbardown
+{
+    top:350px;
+    width:60px;
+    height: 20px;
+    background-image: linear-gradient(to right, rgb(60, 161, 2), rgb(4, 68, 2));
+    border: 3px solid rgb(90, 37, 57);
+    animation: flatbar 3s infinite linear;
+    position: absolute;
+
+}
+#score
+{
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform:translateX(-50%);
+    top: 100px;
+    font-family: myFirstFont;
+    color: white;
+    text-shadow: 0 0 5px #000000, 4px 4px #000000;
+    filter: invert(0);
+    position: absolute;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src:url("Fonts/Score.TTF");
+}
