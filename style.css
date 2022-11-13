@@ -101,7 +101,7 @@ body {
 
 @font-face {
     font-family: myFirstFont;
-    src:url("/Fonts/FlappyNumber.otf");
+    src:url("Fonts/FlappyNumber.otf");
 }
 
 #restart
