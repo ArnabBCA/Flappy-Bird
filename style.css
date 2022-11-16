@@ -1,0 +1,550 @@
+body {
+    margin: 0px;
+}
+#game{
+    
+    top: 5%;
+    left: 50%;
+    transform:translateX(-50%);
+    width: 300px;
+    height: 550px;
+    border: 3px solid black;
+    position: absolute;
+    background-image: linear-gradient(rgb(77, 190, 224), rgb(192, 238, 238), rgb(255, 255, 255));
+    overflow: hidden;
+}
+
+.night
+{
+    background-image: linear-gradient(rgb(45, 37, 99), rgb(86, 154, 255));
+    transition-duration: 3s;
+}
+#block{
+    width: 50px;
+    height: 200px;
+    background-image: linear-gradient(to right,rgb(163, 250, 155) 20%,rgb(82, 192, 38) 30%,rgb(82, 192, 38) 70%,rgb(24, 129, 14) 80%);
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    position: absolute;
+    left: 300px;
+    animation: block 3s infinite linear;
+}
+
+#downblock{
+    width: 50px;
+    height: 128px;
+    background-image: linear-gradient(to right,rgb(163, 250, 155) 20%,rgb(82, 192, 38) 30%,rgb(82, 192, 38) 70%,rgb(24, 129, 14) 80%);
+    border: 3px solid black;
+    position: absolute;
+    top: 350px;
+    left: 300px;
+    animation: block 3s infinite linear;
+}
+@keyframes block{
+    0%{left:300px}
+    100%{left:-100px}
+}
+#hole{
+    width: 50px;
+    height: 150px;
+    background-color:transparent;
+    position: absolute;
+    left: 300px;
+    top: 200px;
+    animation: block 3s infinite linear;
+}
+
+#character{
+    width: 35px;
+    height: 30px;
+    left: 50px;
+    position: absolute;
+    top: 100px;
+}
+
+#flatbartop
+{
+    top:178px;
+    width:60px;
+    height: 20px;
+    background-image: linear-gradient(to right,rgb(163, 250, 155) 15%,rgb(82, 192, 38) 25%,rgb(82, 192, 38) 75%,rgb(24, 129, 14) 85%);
+    border: 3px solid black;
+    animation: flatbar 3s infinite linear;
+    position: absolute;
+
+}
+@keyframes flatbar{
+    0%{left:295px}
+    100%{left:-105px}
+}
+
+#flatbardown
+{
+    top:350px;
+    width:60px;
+    height: 20px;
+    background-image: linear-gradient(to right,rgb(163, 250, 155) 15%,rgb(82, 192, 38) 25%,rgb(82, 192, 38) 75%,rgb(24, 129, 14) 85%);
+    border: 3px solid black;
+    animation: flatbar 3s infinite linear;
+    position: absolute;
+
+}
+#score1
+{
+    text-shadow:-3px 3px black,3px -3px black,-3px -3px black,5px 5px black;
+    color: white;
+    font-size: 40px;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform:translateX(-50%);
+    top: 50px;
+    font-family: myFirstFont;
+    position: absolute;
+    opacity: 1;
+    transition-duration: .5s;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: local("myFirstFont"), url("Fonts/FlappyNumber.otf") format("opentype"); 
+}
+
+#circlestyle
+{
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+    background-color: rgb(218, 253, 255);
+    transition: background-image 3s linear;
+    position: absolute;    
+}
+.circles1
+{
+    top: 50%;
+    left: -10%;
+}
+.circles2
+{
+    top: 49%;
+    left: 5%;
+}
+.circles3
+{
+    top: 51%;
+    left: 20%;
+}
+.circles4
+{
+    top: 51%;
+    left: 35%;
+}
+.circles5
+{
+    top: 53%;
+    left: 48%;
+}
+
+.circles6
+{
+    top: 51%;
+    left: 60%;
+}
+.circles7
+{
+    top: 52%;
+    left: 75%;
+}
+.circles8
+{
+    top: 51%;
+    left: 90%;
+}
+#buildingbox
+{
+    position: absolute;
+    top: 57%;
+    width: 300px;
+    height: 250px;
+    background-image: linear-gradient(rgb(218, 253, 255), rgb(82, 215, 248));
+}
+#building1
+{
+    position:absolute;
+    top: 15%;
+    width: 40px;
+    height: 100px;
+    background-color: rgb(129, 206, 139);
+}
+#building2
+{
+    position:absolute;
+    top: 35%;
+    width: 80px;
+    height: 100px;
+    background-color: rgb(160, 212, 167);
+}
+
+#building3
+{
+    position:absolute;
+    left: 35%;
+    top: 10%;
+    width: 25px;
+    height: 130px;
+    background-color: rgb(129, 206, 139);
+}
+#building4
+{
+    position:absolute;
+    left: 43%;
+    top: 3%;
+    width: 15px;
+    height: 150px;
+    background-color: rgb(160, 212, 167);
+}
+#building5
+{
+    position:absolute;
+    left: 48%;
+    top: 6%;
+    width: 60px;
+    height: 150px;
+    background-color: rgb(129, 206, 139);
+}
+#building6
+{
+    position:absolute;
+    left: 70%;
+    top: 40%;
+    width: 30px;
+    height: 100px;
+    background-color: rgb(160, 212, 167);
+}
+#building7
+{
+    position:absolute;
+    left: 80%;
+    top: 20%;
+    width: 15px;
+    height: 130px;
+    background-color: rgb(129, 206, 139);
+}
+#building8
+{
+    position:absolute;
+    left: 85%;
+    top: 30%;
+    width: 15px;
+    height: 130px;
+    background-color: rgb(160, 212, 167);
+}
+#building9
+{
+    position:absolute;
+    left: 90%;
+    top: 15%;
+    width: 30px;
+    height: 130px;
+    background-color: rgb(129, 206, 139);
+}
+
+#grass1
+{
+    top: 77%;
+    left: -5%;
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border-radius: 35px;
+    background-color: rgb(34, 212, 58);
+    border-top: 4px solid rgb(0, 143, 12);
+}
+#grass2
+{
+    top: 77%;
+    left: 10%;
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border-radius: 35px;
+    background-color: rgb(34, 212, 58);
+    border-top: 4px solid rgb(0, 143, 12);
+}
+#grass3
+{
+    top: 77%;
+    left: 25%;
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border-radius: 35px;
+    background-color: rgb(34, 212, 58);
+    border-top: 4px solid rgb(0, 143, 12);
+}
+#grass4
+{
+    top: 77%;
+    left: 40%;
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border-radius: 35px;
+    background-color: rgb(34, 212, 58);
+    border-top: 4px solid rgb(0, 143, 12);
+}
+#grass5
+{
+    top: 77%;
+    left: 55%;
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border-radius: 35px;
+    background-color: rgb(34, 212, 58);
+    border-top: 4px solid rgb(0, 143, 12);
+}
+#grass6
+{
+    top: 77%;
+    left: 70%;
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border-radius: 35px;
+    background-color: rgb(34, 212, 58);
+    border-top: 4px solid rgb(0, 143, 12);
+}
+#grass7
+{
+    top: 77%;
+    left: 85%;
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border-radius: 35px;
+    background-color: rgb(34, 212, 58);
+    border-top: 4px solid rgb(0, 143, 12);
+}
+
+#grass8
+{
+    top: 78%;
+    left: 3%;
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border-radius: 35px;
+    background-color: rgb(34, 212, 58);
+    border-top: 4px solid rgb(0, 143, 12);
+}
+#grass9
+{
+    top: 78%;
+    left: 18%;
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border-radius: 35px;
+    background-color: rgb(34, 212, 58);
+    border-top: 4px solid rgb(0, 143, 12);
+}
+#grass10
+{
+    top: 78%;
+    left: 33%;
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border-radius: 35px;
+    background-color: rgb(34, 212, 58);
+    border-top: 4px solid rgb(0, 143, 12);
+}
+#grass11
+{
+    top: 78%;
+    left: 48%;
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border-radius: 35px;
+    background-color: rgb(34, 212, 58);
+    border-top: 4px solid rgb(0, 143, 12);
+}
+#grass12
+{
+    top: 78%;
+    left: 63%;
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border-radius: 35px;
+    background-color: rgb(34, 212, 58);
+    border-top: 4px solid rgb(0, 143, 12);
+}
+#grass13
+{
+    top: 78%;
+    left: 78%;
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border-radius: 35px;
+    background-color: rgb(34, 212, 58);
+    border-top: 4px solid rgb(0, 143, 12);
+}
+#grass14
+{
+    top: 78%;
+    left: 93%;
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border-radius: 35px;
+    background-color: rgb(34, 212, 58);
+    border-top: 4px solid rgb(0, 143, 12);
+}
+#lawn
+{
+    position: absolute;
+    top:82%;
+    width: 300px;
+    height: 70px;
+    background-color: rgb(34, 212, 58);
+}
+#ground
+{
+    position: absolute;
+    top:90%;
+    width: 300px;
+    height: 66px;
+    background-color: rgb(252, 199, 131);
+}
+#brickbox
+{
+    top: 87.4%;
+    left: 50%;
+    transform:translateX(-50%);
+    position: absolute;
+    width: 900px;
+    animation: brick 1.6s infinite linear;
+}
+#brick
+{
+    height: 12px;
+    width: 50px;
+    background-image: linear-gradient(to right,rgb(128, 226, 98)50%,rgb(100, 202, 91) 50%);
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    display: table-cell;
+}
+@keyframes brick{
+    0%{left:110px}
+    100%{left:-100px}
+}
+
+#gameover
+{
+    top:110%;
+    left: 50%;
+    transform:translateX(-50%);
+    position: absolute;
+    height: 120px;
+    width:250px;
+    background-color: rgb(252, 199, 131);
+    box-shadow: 0 0 0 5px rgb(214, 149, 64), 0 0 0 8px rgb(82, 22, 22);
+    transition-duration: .5s;
+    visibility: hidden;
+    
+}
+
+p1
+{
+    top: 20%;
+    left: 12%;
+    font-family: ButtonFont;
+    color: #d67200;
+    font-size: 18px;
+    position: absolute;
+    text-shadow:2px 2px rgb(214, 149, 64);
+}
+P2
+{
+    top: 20%;
+    right: 16%;
+    font-family: ButtonFont;
+    color: #d67200;
+    font-size: 18px;
+    position: absolute;
+    text-shadow:2px 2px rgb(214, 149, 64);
+}
+p3
+{
+    color: white;
+    text-shadow:-2px 2px black,2px -2px black,-2px -2px black,4px 4px black;
+    font-size: 30px;
+    position: absolute;
+    left: 30%;
+    transform:translateX(-70%);
+    top: 60px;
+    font-family: myFirstFont;
+    position: absolute;
+}
+p4
+{
+    color: white;
+    text-shadow:-2px 2px black,2px -2px black,-2px -2px black,4px 4px black;
+    font-size: 30px;
+    position: absolute;
+    right: 30%;
+    transform:translateX(70%);
+    top: 60px;
+    font-family: myFirstFont;
+    position: absolute;
+}
+
+#restart {
+    left: 50%;
+    transform:translateX(-50%);
+    position: absolute;
+    top: 140%;
+    background-color: #d67200;
+    border: none;
+    color: white;
+    padding: 3px 6px;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: ButtonFont;
+    box-shadow: 0 0 0 5px rgb(255, 255, 255), 0 0 0 8px rgb(82, 22, 22);
+    text-shadow:2px 2px rgb(82, 22, 22);
+    transition-duration: .5s;
+    visibility: hidden;
+}
+
+@font-face {
+    font-family: ButtonFont;
+    src: local("ButtonFont"), url("Fonts/ButtonFont.ttf") format("truetype"); 
+}
+
+#over
+{
+    font-size: 40px;
+    font-family: Gameover;
+    color: rgb(255, 217, 0);
+    text-shadow:-3px 3px rgb(82, 22, 22),3px -3px rgb(82, 22, 22),-3px -3px rgb(82, 22, 22),5px 5px rgb(82, 22, 22);
+    top: -20%;
+    margin: 0%;
+    left: 50%;
+    transform:translateX(-50%);
+    position: absolute;
+    white-space: nowrap;
+    transition-duration: .5s;
+    visibility: hidden;
+}
+@font-face {
+    font-family: Gameover;
+    src: local("Gameover"), url("Fonts/Gameoverfont.ttf") format("truetype"); 
+}
